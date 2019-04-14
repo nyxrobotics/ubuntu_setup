@@ -36,3 +36,7 @@ fc-cache -vf
 cd ../..
 rm -r ricty_tmp
 
+# >>>sublime text3
+sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
+sudo apt update
+sudo apt install -y sublime-text-installer
