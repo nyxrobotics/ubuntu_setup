@@ -1,12 +1,12 @@
 sudo apt update
-sudo apt install synaptic aptitude htop
+sudo apt install -y synaptic aptitude htop
 
 # >>>unity-tweak-tool(GUI-Theme)
 sudo apt update
-sudo apt install unity-tweak-tool
-sudo add-apt-repository ppa:noobslab/themes
+sudo apt install -y unity-tweak-tool -y
+sudo add-apt-repository -y ppa:noobslab/themes
 sudo apt update
-sudo apt install arc-theme
+sudo apt install -y arc-theme
 
 # >>>terminator
 sudo apt install terminator
@@ -16,7 +16,9 @@ gsettings set org.gnome.desktop.default-applications.terminal exec-arg "-x"
 
 # >>>ricty
 # install fontforge
-sudo apt -y install fontforge
+mkdir ricty_tmp
+cd ricty_tmp
+sudo apt -y install -y fontforge
 # install Inconsolata
 wget http://levien.com/type/myfonts/Inconsolata.otf
 mkdir -p ~/.fonts
@@ -31,3 +33,6 @@ cd Ricty
 bash ricty_generator.sh auto
 cp -f Ricty*.ttf ~/.fonts/
 fc-cache -vf
+cd ../..
+rm -r ricty_tmp
+
