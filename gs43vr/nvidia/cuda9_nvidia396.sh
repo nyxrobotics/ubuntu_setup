@@ -4,16 +4,21 @@
 
 mkdir -p ~/setup/nvidia
 cd ~/setup/nvidia
+
+#wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-ubuntu1604.pin
+#sudo mv cuda-ubuntu1604.pin /etc/apt/preferences.d/cuda-repository-pin-600
+
 wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_9.0.176-1_amd64.deb
 sudo dpkg -i cuda-repo-ubuntu1604_9.0.176-1_amd64.deb
 sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub
 sudo add-apt-repository ppa:graphics-drivers
 
 sudo apt update
-sudo apt install cuda-drivers=396.82-1 cuda-9-0
+sudo apt install -y cuda-drivers=396.82-1 cuda-9-0
 sudo apt-mark hold cuda-drivers
 
-#sudo apt install nvidia-settings=396.82-0ubuntu1 nvidia-prime
-#sudo apt-mark hold nvidia-settings
+#sudo apt install nvidia-modprobe=396.82-0ubuntu1 nvidia-settings=396.82-0ubuntu1
+#sudo apt-mark hold nvidia-settings nvidia-modprobe
+#sudo apt install nvidia-prime
 #sudo prime-select intel
 #sudo prime-select nvidia

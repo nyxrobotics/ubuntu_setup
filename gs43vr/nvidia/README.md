@@ -35,5 +35,5 @@ Setting up cuda-9-0 and nvidia-396
 		kern  :err   : [    1.744866] PKCS#7 signature not signed with a trusted key
 
 
-
-
+- 参考情報
+  - nvidia driverのインストールはcuda-driversを使用するのが公式推奨らしい（[参考](https://qiita.com/ozota/items/28b7e1fbf5015f907638)）
