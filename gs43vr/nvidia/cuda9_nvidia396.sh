@@ -1,18 +1,23 @@
+#sudo apt-mark unhold cuda-drivers
 #sudo apt remove --purge -y --allow-change-held-packages cuda-*
 #sudo apt remove --purge -y --allow-change-held-packages nvidia-* bbswitch*
 #sudo apt autoremove
+#sudo rm /lib/modules/4.15.0-107-generic/updates/dkms/nvidia*
+
+
+#sudo rm /lib/modules/$(uname -r)/updates/dkms/nvidia*
 #sudo update-initramfs -u
 
 mkdir -p ~/setup/nvidia
 cd ~/setup/nvidia
-
+gf7
 #wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-ubuntu1604.pin
 #sudo mv cuda-ubuntu1604.pin /etc/apt/preferences.d/cuda-repository-pin-600
 
 wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_9.0.176-1_amd64.deb
 sudo dpkg -i cuda-repo-ubuntu1604_9.0.176-1_amd64.deb
 sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub
-sudo add-apt-repository ppa:graphics-drivers
+sudo add-apt-repository -y ppa:graphics-drivers
 
 sudo apt update
 sudo apt --only-upgrade install cuda-repo-ubuntu1604
