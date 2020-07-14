@@ -1,6 +1,7 @@
 #sudo apt remove --purge -y --allow-change-held-packages cuda-*
-#sudo apt remove --purge -y --allow-change-held-packages nvidia-*
+#sudo apt remove --purge -y --allow-change-held-packages nvidia-* bbswitch*
 #sudo apt autoremove
+#sudo update-initramfs -u
 
 mkdir -p ~/setup/nvidia
 cd ~/setup/nvidia
@@ -14,8 +15,12 @@ sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/
 sudo add-apt-repository ppa:graphics-drivers
 
 sudo apt update
+sudo apt --only-upgrade install cuda-repo-ubuntu1604
 sudo apt install -y cuda-drivers=396.82-1 cuda-9-0
 sudo apt-mark hold cuda-drivers
+
+#sudo apt install -y cuda-drivers=418.152.00-1 cuda-10-1
+#sudo apt-mark hold cuda-drivers
 
 #sudo apt install nvidia-modprobe=396.82-0ubuntu1 nvidia-settings=396.82-0ubuntu1
 #sudo apt-mark hold nvidia-settings nvidia-modprobe
