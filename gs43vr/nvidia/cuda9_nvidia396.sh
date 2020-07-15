@@ -2,7 +2,9 @@
 #sudo apt remove --purge -y --allow-change-held-packages cuda-*
 #sudo apt remove --purge -y --allow-change-held-packages nvidia-* bbswitch*
 #sudo apt autoremove
-#sudo rm /lib/modules/4.15.0-107-generic/updates/dkms/nvidia*
+#sudo rm /lib/modules/$(uname -r)/updates/dkms/nvidia*
+#sudo rm /lib/modules/$(uname -r)/updates/dkms/vbox*
+
 
 
 #sudo rm /lib/modules/$(uname -r)/updates/dkms/nvidia*
