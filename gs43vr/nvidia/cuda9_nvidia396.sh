@@ -8,9 +8,8 @@
 #sudo rm /lib/modules/$(uname -r)/updates/dkms/nvidia*
 #sudo update-initramfs -u
 
-mkdir -p ~/setup/nvidia
-cd ~/setup/nvidia
-gf7
+mkdir -p ~/lib/nvidia
+cd ~/lib/nvidia
 #wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-ubuntu1604.pin
 #sudo mv cuda-ubuntu1604.pin /etc/apt/preferences.d/cuda-repository-pin-600
 
