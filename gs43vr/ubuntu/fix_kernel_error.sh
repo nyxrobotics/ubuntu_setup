@@ -2,7 +2,7 @@ mkdir -p ~/lib
 cd ~/lib
 git clone https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git
 sudo cp linux-firmware/i915/*.bin /lib/firmware/i915/
-sudo cp linux-firmware/nvidia /lib/firmware/
+sudo cp -r linux-firmware/nvidia /lib/firmware/
 
 #sudo ubuntu-drivers autoinstall
 #sudo update-initramfs -u
