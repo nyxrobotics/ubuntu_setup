@@ -1,11 +1,9 @@
-#sudo apt-mark unhold cuda-drivers
-#sudo apt remove --purge -y --allow-change-held-packages cuda-*
-#sudo apt remove --purge -y --allow-change-held-packages nvidia-* bbswitch*
-#sudo apt autoremove
-#sudo rm /lib/modules/$(uname -r)/updates/dkms/nvidia*
-#sudo rm /lib/modules/$(uname -r)/updates/dkms/vbox*
-
-
+# sudo apt-mark unhold cuda-drivers
+# sudo apt remove --purge -y --allow-change-held-packages cuda-*
+# sudo apt remove --purge -y --allow-change-held-packages nvidia-* bbswitch* virtualbox*
+# sudo apt autoremove -y
+# sudo rm /lib/modules/$(uname -r)/updates/dkms/nvidia*
+# sudo rm /lib/modules/$(uname -r)/updates/dkms/vbox*
 
 #sudo rm /lib/modules/$(uname -r)/updates/dkms/nvidia*
 #sudo update-initramfs -u
@@ -25,7 +23,8 @@ sudo apt --only-upgrade install cuda-repo-ubuntu1604
 sudo apt install -y cuda-drivers=396.82-1 cuda-9-0
 sudo apt-mark hold cuda-drivers
 
-#sudo apt install -y cuda-drivers=418.152.00-1 cuda-10-1
+#sudo apt install -y cuda-drivers=418.152.00-1 cuda-10-0
+#sudo apt install -y cuda-drivers=410.129-1 cuda-10-0
 #sudo apt-mark hold cuda-drivers
 
 #sudo apt install nvidia-modprobe=396.82-0ubuntu1 nvidia-settings=396.82-0ubuntu1
