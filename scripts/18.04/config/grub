@@ -7,7 +7,7 @@ GRUB_DEFAULT=0
 GRUB_TIMEOUT_STYLE=hidden
 GRUB_TIMEOUT=0
 GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
-GRUB_CMDLINE_LINUX_DEFAULT="pci=noaer libata.noacpi=1 nvme_core.default_ps_max_latency_us=5500 nvidia-drm.modeset=0 acpiphp.disable=1 quiet"
+GRUB_CMDLINE_LINUX_DEFAULT="nvme_core.default_ps_max_latency_us=4950 nvme_core.force_apst=1 acpiphp.disable=1 pcie_aspm=off nvidia-drm.modeset=0 pci=noaer libata.noacpi=1 quiet"
 GRUB_CMDLINE_LINUX=""
 
 # Uncomment to enable BadRAM filtering, modify to suit your needs
