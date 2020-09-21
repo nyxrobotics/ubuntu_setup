@@ -23,3 +23,6 @@
     - 18.04:mozcの入力切替のほうが早い→sublime text3でインライン入力ができない
   - 18.04で不安定な要素
     - acpiのsleep, idelに関する機能が不安定（NVME, USB bus, pci全般→grubで無効化する）
+    - Ubuntu17.04以降、NVMeのSSDを使用すると、使用中に突然クラッシュするバグがある
+      - 参考１：https://askubuntu.com/questions/1176021/18-04-or-19-04-on-samsung-nvme-ssd-%E2%86%92-bus-errors
+      - 参考２：https://askubuntu.com/questions/905710/ext4-fs-error-after-ubuntu-17-04-upgrade
