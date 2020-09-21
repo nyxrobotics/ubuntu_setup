@@ -8,13 +8,13 @@ sudo apt autoremove -y
 mkdir -p ~/lib/nvidia
 cd ~/lib/nvidia
 
-if [ -f "cuda-repo-ubuntu1804_10.2.214-1_amd64.deb" ]; then
-    echo "cuda-repo-ubuntu1804_10.2.214-1_amd64.deb exists."
+if [ -f "cuda-repo-ubuntu1804_10.0.130-1_amd64.deb" ]; then
+    echo "cuda-repo-ubuntu1804_10.0.130-1_amd64.deb exists."
 else
-    wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-repo-ubuntu1804_10.2.214-1_amd64.deb
+    wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-repo-ubuntu1804_10.0.130-1_amd64.deb
 fi
 
-sudo dpkg -i cuda-repo-ubuntu1804_10.2.214-1_amd64.deb
+sudo dpkg -i cuda-repo-ubuntu1804_10.0.130-1_amd64.deb
 sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
 
 sudo apt update
