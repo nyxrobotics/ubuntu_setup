@@ -3,6 +3,8 @@
 # >>>Grub
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0}); pwd)
 cd $SCRIPT_DIR
+sudo apt update
+sudo apt install -y nvme-cli
 sudo cp ../config/grub /etc/default/grub
 sudo update-grub
 # >>> Disable animation
@@ -10,7 +12,6 @@ gsettings set org.gnome.desktop.interface enable-animations false
 # >>>Fix "Failed to fetch" error
 sudo rm -rf /var/lib/apt/lists/*
 # >>>Install synaptic and aptitude (debian package managers) and htop (CUI resource monitor)
-sudo apt update
 sudo apt install -y synaptic aptitude htop git
 # >>>Install terminator(set as default terminal)
 sudo apt install -y terminator

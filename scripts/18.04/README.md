@@ -16,3 +16,10 @@
   - nvidiaドライバ、cudaのインストールが不要な場合、ubuntu_environments.sh内のnvidiaの行をコメントアウトしてください
 
     #bash nvidia.sh
+
+- 16.04と18.04の違い
+  - 日本語/英語入力切替
+    - 16.04:ibusの入力メソッド切り替えのほうが早い
+    - 18.04:mozcの入力切替のほうが早い→sublime text3でインライン入力ができない
+  - 18.04で不安定な要素
+    - acpiのsleep, idelに関する機能が不安定（NVME, USB bus, pci全般→grubで無効化する）
