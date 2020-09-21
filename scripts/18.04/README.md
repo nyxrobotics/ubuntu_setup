@@ -26,3 +26,7 @@
     - Ubuntu17.04以降、NVMeのSSDを使用すると、使用中に突然クラッシュするバグがある
       - 参考１：https://askubuntu.com/questions/1176021/18-04-or-19-04-on-samsung-nvme-ssd-%E2%86%92-bus-errors
       - 参考２：https://askubuntu.com/questions/905710/ext4-fs-error-after-ubuntu-17-04-upgrade
+    - 修正方法
+      - 参考１：https://itectec.com/ubuntu/ubuntu-bios-does-not-detect-ssd-after-reboot-from-ubuntu-16-04-dell-xps-15/
+      - 参考２：https://qiita.com/izz_miya/items/deac834dccaacdae696a
+      - 試行錯誤情報：https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1678184
