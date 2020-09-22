@@ -30,3 +30,8 @@
       - 参考１：https://itectec.com/ubuntu/ubuntu-bios-does-not-detect-ssd-after-reboot-from-ubuntu-16-04-dell-xps-15/
       - 参考２：https://qiita.com/izz_miya/items/deac834dccaacdae696a
       - 試行錯誤情報：https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1678184
+  - Network manager
+    - QCA6174が不安定
+      - https://qastack.jp/ubuntu/878097/more-wifi-issues-qualcomm-atheros-qca6174-ath10k-pci
+      - https://ubuntuforums.org/showthread.php?t=2322547
+
