@@ -1,5 +1,5 @@
-# ubuntu_environments
-- ubuntu_environments.sh　: CUBOID等のロボット内部へUbuntu18.04をインストール後、各種設定を反映するスクリプト
+# ubuntu_setup
+- ubuntu_setup.sh　: CUBOID等のロボット内部へUbuntu18.04をインストール後、各種設定を反映するスクリプト
 
 - 手順
   1. BIOS:

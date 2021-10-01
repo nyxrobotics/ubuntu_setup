@@ -1,4 +1,4 @@
-# ubuntu-settings
+# ubuntu_setup
 Settings for Ubuntu for me
 
 [メモ]
