@@ -7,15 +7,17 @@
     - secure boot -> disable
     - boot mode -> uefi
   2. Ubuntu18.04.4をインストール
-  3. sbgisenwikiをcloneする
-  4. ubuntu_environments.shを実行する
-  5. ROSをインストールする
+  3. SSHキーを生成してGithubに登録する
+  4. ubuntu_settingsをcloneする
+  5. ubuntu_setup.shを実行する
+  6. ROSをインストールする
 
 - 注意点
   - vortualboを使用する場合はnvidia.shを走らせると起動しなくなるため、virtualbox環境ではcudaの検証ができませんでした
   - nvidiaドライバ、cudaのインストールが不要な場合、ubuntu_environments.sh内のnvidiaの行をコメントアウトしてください
-
-    #bash nvidia.sh
+    ```bash nvidia.sh```
+  - launcherを隠す設定にする場合はmodules/ubuntu_tools.shの下記をコメント解除  
+    ```gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false```
 
 - 16.04と18.04の違い
   - 日本語/英語入力切替

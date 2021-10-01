@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# >>>Disable suspend
+sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
+# >> Re-enable
+# sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target
 # >>>Install unity-tweak-tool(GUI-Theme)
 sudo add-apt-repository -y ppa:noobslab/themes
 sudo apt update
@@ -15,7 +19,7 @@ sudo rm /var/crash/*
 sudo systemctl disable apport
 sudo apt purge -y apport
 # >>>Hide launcher
-dconf write "/org/compiz/profiles/unity/plugins/unityshell/launcher-hide-mode" 1 #Please toggle here 1/0
+# dconf write "/org/compiz/profiles/unity/plugins/unityshell/launcher-hide-mode" 1 #Please toggle here 1/0
 # >>>Disable lock-screen
 gsettings set org.gnome.desktop.session idle-delay 0
 gsettings set org.gnome.desktop.lockdown disable-lock-screen true

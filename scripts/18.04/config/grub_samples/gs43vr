@@ -4,14 +4,10 @@
 #   info -f grub -n 'Simple configuration'
 
 GRUB_DEFAULT=0
-#GRUB_HIDDEN_TIMEOUT=0
-GRUB_HIDDEN_TIMEOUT_QUIET=false
-GRUB_TIMEOUT=10
+GRUB_TIMEOUT_STYLE=hidden
+GRUB_TIMEOUT=0
 GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
-GRUB_CMDLINE_LINUX_DEFAULT="libata.noacpi=1 acpi=force"
-#GRUB_CMDLINE_LINUX_DEFAULT="libata.noacpi=1 nouveau.blacklist=1"
-#GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
-GRUB_CMDLINE_LINUX=""
+GRUB_CMDLINE_LINUX_DEFAULT="nvme_core.default_ps_max_latency_us=4950 nvme_core.force_apst=1 acpiphp.disable=1 pcie_aspm=off nvidia-drm.modeset=0 pci=noaer libata.noacpi=1 quiet"
 
 # Uncomment to enable BadRAM filtering, modify to suit your needs
 # This works with Linux (no patch required) and with any kernel that obtains
